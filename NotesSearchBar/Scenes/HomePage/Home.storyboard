@@ -16,10 +16,39 @@
                     <view key="view" contentMode="scaleToFill" id="Up9-Yy-50I">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B7s-gG-Rqc">
+                                <rect key="frame" x="10" y="265" width="373" height="18.666666666666686"/>
+                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIb-qu-Gnq">
+                                <rect key="frame" x="126.66666666666669" y="408.66666666666669" width="140" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="3qp-0x-V4V"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Submit"/>
+                                <connections>
+                                    <action selector="didTapSubmit:" destination="01N-Fx-F2O" eventType="touchUpInside" id="eDz-8G-6vA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7fh-NK-AI3"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="7fh-NK-AI3" firstAttribute="trailing" secondItem="B7s-gG-Rqc" secondAttribute="trailing" constant="10" id="Jb7-sy-d9g"/>
+                            <constraint firstItem="B7s-gG-Rqc" firstAttribute="top" secondItem="7fh-NK-AI3" secondAttribute="top" constant="110" id="ccG-M1-T14"/>
+                            <constraint firstItem="JIb-qu-Gnq" firstAttribute="centerY" secondItem="Up9-Yy-50I" secondAttribute="centerY" id="mRe-yJ-ahD"/>
+                            <constraint firstItem="B7s-gG-Rqc" firstAttribute="leading" secondItem="7fh-NK-AI3" secondAttribute="leading" constant="10" id="sub-Sr-UNW"/>
+                            <constraint firstItem="JIb-qu-Gnq" firstAttribute="centerX" secondItem="Up9-Yy-50I" secondAttribute="centerX" id="zK7-eC-JYG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="FfY-hQ-siH"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="B7s-gG-Rqc" id="sgO-sL-Fst"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="crK-So-UxE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,6 +80,9 @@
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

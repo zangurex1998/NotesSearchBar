@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class NoteDataSource{
+    static let shared = NoteDataSource() 
+    var notes: [Note] = [
+        .init(header: "Giorgi", text: "Gioo"),
+        .init(header: "George", text: "Hello"),
+        .init(header: "Gg", text: "Gh")
+        
+    ]
+}

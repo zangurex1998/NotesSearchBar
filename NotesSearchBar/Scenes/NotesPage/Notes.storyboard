@@ -16,10 +16,32 @@
                     <view key="view" contentMode="scaleToFill" id="jZK-gs-AZB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fIM-Rg-fmV">
+                                <rect key="frame" x="0.0" y="155" width="393" height="663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0nu-2I-BRr">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3SC-mW-8W3"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="3SC-mW-8W3" firstAttribute="trailing" secondItem="fIM-Rg-fmV" secondAttribute="trailing" id="7vz-7R-Fm6"/>
+                            <constraint firstItem="fIM-Rg-fmV" firstAttribute="leading" secondItem="3SC-mW-8W3" secondAttribute="leading" id="Ewx-5l-5y7"/>
+                            <constraint firstItem="fIM-Rg-fmV" firstAttribute="top" secondItem="3SC-mW-8W3" secondAttribute="top" id="mvh-i2-cec"/>
+                            <constraint firstItem="3SC-mW-8W3" firstAttribute="bottom" secondItem="fIM-Rg-fmV" secondAttribute="bottom" id="tEZ-xm-WPe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rXC-62-XFM"/>
+                    <connections>
+                        <outlet property="collectionView" destination="fIM-Rg-fmV" id="6fB-Oi-QQI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kzv-2c-K2s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,6 +73,9 @@
         <image name="note.text" catalog="system" width="128" height="107"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
